@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>File Operations (fs + Express)</title>
+
+</head>
+<body>
+  <h2>File Operations with Express and fs</h2>
+
+  <button onclick="callRoute('write')">Write File</button>
+  <button onclick="callRoute('append')">Append to File</button>
+  <button onclick="callRoute('read')">Read File</button>
+  <button onclick="callRoute('rename')">Rename File</button>
+  <button onclick="callRoute('exists')">Check if File Exists</button>
+  <button onclick="callRoute('delete')">Delete File</button>
+
+  <div id="output"></div>
+
+  <script>
+    function callRoute(route) {
+      fetch(`/${route}`)
+        .then(res => res.text())
+        .then(data => {
+          document.getElementById('output').innerText = data;
+        })
+        .catch(err => {
+          document.getElementById('output').innerText = ' Error: ' + err;
+        });
+    }
+  </script>
+</body>
+</html>

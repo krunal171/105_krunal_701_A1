@@ -1,0 +1,13 @@
+{
+  "name": "q8",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "node server.js",
+    "test": "echo \"No tests specified\" && exit 0",
+    "greet": "echo Hello, world!",
+    "lint": "eslint .",
+    "start:dev": "nodemon server.js"
+    
+  }
+}
